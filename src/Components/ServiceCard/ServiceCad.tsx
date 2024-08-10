@@ -14,7 +14,7 @@ function ServiceCad({cardHead , subTxt,color}: {cardHead : string ,subTxt: strin
         {subTxt ?.map((text)=>(
             <p className="text-[14px] text-white mt-1 font-normal">{text}</p>
         ))}
-        <div className='absolute bottom-10 left-0  shadow-xl rounded-e-md p-2 flex items-center'
+        <div className='absolute bottom-10 left-0  shadow-md shadow-gray-900 rounded-e-md p-2 flex items-center'
             style={{
                 backgroundColor : color
             }}

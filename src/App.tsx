@@ -1,20 +1,18 @@
-import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Pages/home'
-import Nav from './Components/Navbar/Nav'
-import ServiceCad from './Components/ServiceCard/ServiceCad'
-import IconBox from './Components/IconBox/IconBox'
-import VerticalBox from './Components/VerticalBox/VerticalBox'
-import EnquiryCard from './Components/EnquiryCard/EnquiryCard'
+import ProductDisplay from './Pages/ProductDisplay'
+import PrivateProduct from './Pages/PrivateProduct'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <Home></Home>
-    {/* <EnquiryCard/> */}
-      {/* <VerticalBox Head='Wedding' imageNames={['saloon']}/> */}
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/product/:cid' element={<ProductDisplay/>}/>
+      <Route path='/private' element={<PrivateProduct/>}/>
+    </Routes>
     </>
   )
 }
